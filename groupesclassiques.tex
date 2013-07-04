@@ -239,15 +239,15 @@
 %%% algèbres
 
 \def\opp{\mathrm{op}} %algèbre opposée
-\def\Symalg{\mathbb{S}} %algèbre symmétrique sur un module
+\def\Symalg{\mathbb{S}} %algèbre symétrique sur un module
 \def\trace{\mathrm{tr}} %trace
 
 %%% modules bilinéaires et quadratiques
 
 \def\rad{\mathrm{rad}} %radical d'une forme bilinéaire ou de sa forme polaire.
 \def\qrad{\mathrm{qrad}} %radical quadratique
-\def\hyps{b^h} %module hyperbolique symmétrique
-\def\hypa{a^h} %module hyperbolique antisymmétrique
+\def\hyps{b^h} %module hyperbolique symétrique
+\def\hypa{a^h} %module hyperbolique antisymétrique
 \def\hypq{q^h} %module hyperbolique quadratique
 \def\orth{\perp} %somme orthogonale
 \newcommand{\fq}[1]{\langle #1\rangle} %forme quadratique
@@ -423,7 +423,7 @@ Rappelons brièvement et de manière informelle%
 \begin{itemize}
 \item des objets $(Y_j)$, $j \in J$ de $\cC$ sont spécifiés (ils joueront le rôle de constantes, ils ne dépendent que de $\struc$, pas de l'objet $\Xstruc$ en $\struc$ spécifique; ex: $I=\{0\}$ et $Y_0=\sgO_S$);
 \item des morphismes de $\cC$ entre des produits (finis) des $Y_i$ sont spécifiés (jouant également le rôle de constantes, ex: la multiplication par $-1$ de $\sgGm \to \sgGm$);
-\item des morphismes entre des produits (finis) de copies de des $X_i$, et des $Y_j$ sont spécifiés (ex: $\sgGm \times X \to X$). N.B. La forme de la source et du but de ces morphismes ne dépend que de $\struc$, pas de l'objet $\Xstruc$ spécifique. 
+\item des morphismes entre des produits (finis) de copies des $X_i$, et des $Y_j$ sont spécifiés (ex: $\sgGm \times X \to X$). N.B. La forme de la source et du but de ces morphismes ne dépend que de $\struc$, pas de l'objet $\Xstruc$ spécifique. 
 \item un nombre fini de diagrammes supposés commutatifs, appelées contraintes. Ces diagrammes sont entre des produits de copies des $X_i$ et des $Y_i$, et impliquent des morphismes construits itérativement par composées et produits cartésiens en partant de l'identité, des morphismes précédents, des applications diagonales et des échanges de deux facteurs identiques. N.B. La forme de ces diagrammes et la manière itérative dont ils sont construits ne dépend que de $\struc$, pas de l'objet $\Xstruc$ spécifique.
 \end{itemize}
 On a une notion évidente de morphisme entre deux objets en $\struc$: c'est une famille de morphismes $f_i:X_i \to X'_i$ qui commutent à tout les morphismes définissant les objets $\Xstruc$ et $\Xstruc'$ en $\struc$. Cela définit donc la catégorie des objets en $\struc$ de $\cC$, notée $\cC^\struc$.
@@ -441,11 +441,11 @@ Tout d'abord, la structure triviale sur un objet est celle pour laquelle les con
 \item \label{OSmod_item} $\sgO_S$-module: la structure de l'anneau $\sgO_S$ (qui ne fait donc intervenir que des objets constants) et une structure de groupe abélien et d'action de $\sgO_S$ avec les contraintes habituelles;
 \item $\sgO_S$-algèbre $\alg$: la structure de $\sgO_S$-module assorti d'une multiplication avec les contraintes habituelles;
 \item $\sgO_S$-algèbre à involution $\alginv$: la structure de $\sgO_S$-algèbre avec un morphisme $\sigma$ du $\sgO_S$-module sous-jacent, qui anti-commute à la multiplication et qui vérifie $\sigma^2=\mathrm{Id}$ (et qui est donc un automorphisme de module).
-\item \label{bilineaire_item} $\sgO_S$-forme bilinéaire (resp. symmétrique, alternée), c'est-à-dire une structure de $\sgO_S$-module, avec un morphisme $M \times M \to \sgO_S$ qui est bilinéaire (resp. et symmétrique ou alterné). 
+\item \label{bilineaire_item} $\sgO_S$-forme bilinéaire (resp. symétrique, alternée), c'est-à-dire une structure de $\sgO_S$-module, avec un morphisme $M \times M \to \sgO_S$ qui est bilinéaire (resp. et symmétrique ou alterné). 
 \item \label{quadratique_item} $\sgO_S$-module quadratique: une structure de $\sgO_S$ module, à laquelle on rajoute un morphisme $q: M \to \sgO_S$ qui est quadratique en la multiplication par les scalaires de $\sgO_S$ et tel que le module polaire associé satisfait aux contraintes de bilinéarité de l'exemple précédent. 
 \item \label{modulentriv_item} $\sgO_S$-module trivialisé $\nTriv{n}$: une structure de $\sgO_S$-module, ainsi qu'un isomorphisme $M^{\otimes n} \to \sgO_S$ (c'est-à-dire en fait deux morphismes dont la composée fait l'identité dans les deux sens). \bap{On peut peut-être retirer puisque c'est un produit fibré.}
 \item \label{moduledet_item} $\sgO_S$-module déterminant $\moddet$: la structure précédente pour $n=2$. \bap{Même remarque.}
-\item \label{groupeaction_item} $G$-action à gauche $\actg{G}$ (ou à droite $\actd{G}$): étant donné un objet en groupes $G$ donné, utilisé comme objet constant, un $G$-objet est un objet $X$ muni d'un morphisme $G\times X\to X$, satisfaisant les diagrammes d'associativité et de l'action triviale du neutre. Cette action peut être à gauche ou à droite, auquel cas le morphisme considéré est plutôt $X \times G \to X$.
+\item \label{groupeaction_item} $G$-action à gauche $\actg{G}$ (ou à droite $\actd{G}$): étant donné un objet en groupes $G$, utilisé comme objet constant, un $G$-objet est un objet $X$ muni d'un morphisme $G\times X\to X$, satisfaisant les diagrammes d'associativité et de l'action triviale du neutre. Cette action peut être à gauche ou à droite, auquel cas le morphisme considéré est plutôt $X \times G \to X$.
 \end{enumerate}
 \end{exem}
 
@@ -461,7 +461,7 @@ Afin de formaliser les changements de base, la première notion à introduire est 
 Une \emph{Catégorie fibrée scindée} sur les $S$-schémas, ou plus simplement une \emph{$S$-catégorie fibrée} est la donnée  pour tout schéma $T$ sur $S$ d'une catégorie $\cC_{T}$ appelée fibre sur $T$, et de foncteurs de changement de base $\phi_{T'\to T}:\cC_{T} \to \cC_{T'}$ pour tout $S$-morphisme $T' \to T$. Ces foncteurs doivent respecter la composition, à un isomorphisme canonique près, que nous supposerons étre une égalité pour simplifier l'exposition. 
 \end{defi}
 
-Comme il est de coûtume, si $X$ est un objet de $\cC_T$ et $T'$ un $T$-schéma, nous désignerons son changement de base $\phi_{T'\to T}(X)$ par $X_{T'}$.
+Comme il est de coutume, si $X$ est un objet de $\cC_T$ et $T'$ un $T$-schéma, nous désignerons son changement de base $\phi_{T'\to T}(X)$ par $X_{T'}$.
 
 \begin{defi} \label{fonctfib_defi}
 Un foncteur $F$ d'une $S$-catégories fibrée $\cC$ vers une autre $\cD$ est la donnée, pour chaque $T$ sur $S$, d'un foncteur $F_{T}:\cC_{T} \to \cD_{T}$, de manière à commuter avec les foncteurs de changement de base. 
@@ -471,7 +471,7 @@ Un foncteur $F$ d'une $S$-catégories fibrée $\cC$ vers une autre $\cD$ est la do
 Soient $F_1:\cC_1 \to \cD$ et $F_2:\cC_2 \to \cD$ deux foncteurs de $S$-catégories fibrées. Alors on définit le produit fibré de catégories fibrées $\cC_1 \times_\cD \cC_2$ comme la catégorie fibrée dont les objets sur $T$ sont les triplets $(x_1,x_2,\phi)$ avec $x_1,x_2 \in \cC_T$, $\phi:F_1(x_1)\simeq F_2(x_2)$ et dont les morphismes $(x_1,x_2,\phi) \to (y_1,y_2,\psi)$ sont les paires de morphismes $f_1:x_1 \to y_1$ et $f_2:x_2 \to y_2$ tels que $\psi \circ F_1(f_1)=F_2(f_2)\circ \phi$.
 \end{defi}
 
-Notons $P_i$ pour $i=1,2$ les foncteurs de projection évidents $\cC_2 \times_\cD \cC_2 \to \cC_i$, et notons $c$ l'isomorphisme de foncteurs $F_1 P_1 \simeq F_2 P_2$ donnée par $c_{(x_1,x_2,\phi}=\phi$. Il est immédiat que le produit fibré $\cC_1 \otimes_\cD \cC_2$ satisfait à la propriété universelle suivante. 
+Notons $P_i$ pour $i=1,2$ les foncteurs de projection évidents $\cC_2 \times_\cD \cC_2 \to \cC_i$, et notons $c$ l'isomorphisme de foncteurs $F_1 P_1 \simeq F_2 P_2$ donnée par $c_{(x_1,x_2,\phi)}=\phi$. Il est immédiat que le produit fibré $\cC_1 \otimes_\cD \cC_2$ satisfait à la propriété universelle suivante. 
 \begin{prop} \label{univprodfib_prop}
 \'Etant donné une $S$-catégorie fibrée $\cA$, deux foncteurs $G_1:\cA \to \cC_1$ et $G_2:\cA\to\cC_2$ et un isomorphisme de foncteurs $a:F_1 G_1 \isoto F_2 G_2$, il existe un unique foncteur $H$ tel que pour $i=1,2$, on ait $P_i H = F_i$ et l'égalité de morphismes de foncteurs $c H = a$.
 \end{prop}
@@ -480,7 +480,7 @@ Notons $P_i$ pour $i=1,2$ les foncteurs de projection évidents $\cC_2 \times_\cD
 
 \bap{Donner un bon exemple, du genre les déploiements de Clifford.}
 
-Un \emph{groupoïde} est une catégorie dans laquelle tout les morphismes sont des isomorphismes. A toute catégorie $\cC$, on peut associer un groupoïde $\cC_\grpd$, qui a les mêmes objets, mais dont les morphismes sont les seuls isomorphismes de $\cC$. De même, groupoïde $\cC_\grpd$ associé à une catégorie fibrée $\cC$ est la catégorie fibrée de fibres $(\cC_\grpd)_T=(\cC_T)_\grpd$.
+Un \emph{groupoïde} est une catégorie dans laquelle tout les morphismes sont des isomorphismes. A toute catégorie $\cC$, on peut associer un groupoïde $\cC_\grpd$, qui a les mêmes objets, mais dont les morphismes sont les seuls isomorphismes de $\cC$. De même, le groupoïde $\cC_\grpd$ associé à une catégorie fibrée $\cC$ est la catégorie fibrée de fibres $(\cC_\grpd)_T=(\cC_T)_\grpd$.
 
 Ajoutons maintenant une topologie de Grothendieck $\Ttau$ sur la catégorie des $S$-schémas, ce qui nous permettra de parler de propriétés locales d'objets de la catégorie fibrée. Cette topologie sera souvent sous-entendue.
 
@@ -502,7 +502,7 @@ Nous voulons maintenant pouvoir manipuler des objets en une structure, mais sur 
  
 \subsubsection{Champs}
 
-Pour pouvoir décrire concrètement les catégories de torseurs sous des groupes classiques, nous avons besoin d'un cadre dans lequel on puisse tordre un objet d'une catégorie par un torseurs sous son groupe d'automorphismes, et obtenir ainsi un nouvel objet de cette catégorie. Le bon cadre pour ce type d'opérations est celui des champs, tel que développé dans \cite{gir}, dont nous n'aurons en fait besoin que d'une petite part. Aussi, le but de ce qui suit est d'introduire et de rendre palpable la partie de la théorie dont nous aurons besoin pour le lecteur qui ne connaît pas les champs.
+Pour pouvoir décrire concrètement les catégories de torseurs sous des groupes classiques, nous avons besoin d'un cadre dans lequel on puisse tordre un objet d'une catégorie par un torseur sous son groupe d'automorphismes, et obtenir ainsi un nouvel objet de cette catégorie. Le bon cadre pour ce type d'opérations est celui des champs, tel que développé dans \cite{gir}, dont nous n'aurons en fait besoin que d'une petite part. Aussi, le but de ce qui suit est d'introduire et de rendre palpable la partie de la théorie dont nous aurons besoin pour le lecteur qui ne connaît pas les champs.
 
 De manière imagée, un champ est une catégorie fibrée (sur une catégorie de base munie d'une topologie) dans laquelle on peut définir les objets et les morphismes localement par recollement. En étant encore plus imprécis, c'est une sorte de faisceau de catégories. Formellement:
  
@@ -566,7 +566,7 @@ Expliquons maintenant comment on tord un faisceau $X$ muni d'une action d'un fai
 
 \subsubsection{Actions de groupes}
 
-Soit $H$ un $S$-faisceau en groupes et soit $X$ un $S$-faisceau, muni d'une action à gauche (resp. à droite) de $H$, donc un objet en $\actg{H}$ (resp. en $\actd{H}$ comme dans l'exemple \ref{structures_exem} \eqref{groupeaction_item} ci-dessus. Ceci est équivalent à la donnée d'un morphisme de faisceaux en groupes $H \to \faisAut_X$ (resp. $H^\opp \to \faisAut_X$ (un faisceau à groupes d'opérateurs $H$ dans la terminologie de \SGAtrois). 
+Soit $H$ un $S$-faisceau en groupes et soit $X$ un $S$-faisceau, muni d'une action à gauche (resp. à droite) de $H$, donc un objet en $\actg{H}$ (resp. en $\actd{H}$) comme dans l'exemple \ref{structures_exem} \eqref{groupeaction_item} ci-dessus. Ceci est équivalent à la donnée d'un morphisme de faisceaux en groupes $H \to \faisAut_X$ (resp. $H^\opp \to \faisAut_X$) (un faisceau à groupes d'opérateurs $H$ dans la terminologie de \SGAtrois). 
 
 Considérons alors la catégorie fibrée $\CatFais_{/S}^{\actg{H}}$ (resp. $\CatFais_{/S}^{\actg{H}}$), qui est un champ par la proposition \ref{champstruc_prop}. Les objets de sa $T$-fibre sont donc les $T$-faisceaux munis d'une action à gauche de $H_T$ (resp. à droite). 
 
@@ -727,7 +727,7 @@ qui envoie un couple $(P,X)$ vers un objet noté $P\contr{H} X$ et tel que si $P=
 
 Bien entendu, lorsque $\cC=\CatFais^{\struc}$, on retrouve le produit contracté défini plus haut, par unicité. 
 
-Ce foncteur $Tw$ n'est pas mystérieux. On peut construire $P\contr{H} X$ à la main par descente: on choisit un recouvrement $(T_i)$ de $T$ pour lequel $P_{T_i}$ est trivial, et on choisit un point $p_i$ de $P(T_i)$. Ensuite, puisque $P_{T_{ij}}$ est reste trivial, on il existe un élément $h_{ij}$ de $H(T_{ij})$ qui envoie $(p_i)_{T_{ij}}$ vers $(p_j)_{T_{ij}}$. On peut donc considérer la donnée de descente $X_i=X_{T_i}$ et ${X_i}_{T_ij} =X_{T_ij} \simeq (X_j)_{T_ij}$ donnée par l'action de $h_{ij}$. Il est immédiat que c'est une donnée de descente, et cela définit donc un objet de $\cC$, puisque $\cC$ est un champ. 
+Ce foncteur $Tw$ n'est pas mystérieux. On peut construire $P\contr{H} X$ à la main par descente: on choisit un recouvrement $(T_i)$ de $T$ pour lequel $P_{T_i}$ est trivial, et on choisit un point $p_i$ de $P(T_i)$. Ensuite, puisque $P_{T_{ij}}$ reste trivial, il existe un élément $h_{ij}$ de $H(T_{ij})$ qui envoie $(p_i)_{T_{ij}}$ vers $(p_j)_{T_{ij}}$. On peut donc considérer la donnée de descente $X_i=X_{T_i}$ et ${X_i}_{T_ij} =X_{T_ij} \simeq (X_j)_{T_ij}$ donnée par l'action de $h_{ij}$. Il est immédiat que c'est une donnée de descente, et cela définit donc un objet de $\cC$, puisque $\cC$ est un champ. 
 
 %\begin{exem}
 %Soit $X$ une algèbre sur $R$ (ou plus généralement un faisceau en algèbres sur $S$), qui est projective de type fini comme $R$-module. Soit $H=\Aut_A$. \bap{Et alors, qu'est-ce qu'on veut dire?}
@@ -757,7 +757,7 @@ Ce foncteur $Tw$ n'est pas mystérieux. On peut construire $P\contr{H} X$ à la ma
 %On peut également construire itérativement des structures à foncteurs en remplaçant les structures élémentaires utilisées par des structures qui sont déjà avec foncteurs. De même que précédemment, les objets en une structure à foncteurs forment une catégorie de manière canonique.
 %\medskip
 %
-%Donnons quelques exemples, pour fixer les idées. Les foncteurs que nous utiliserons typiquement dans les constructions sont les produits tensoriels, extérieurs et symmétriques des $\sgO_S$-modules, l'algèbre de Clifford d'un module quadratique, les endomorphismes d'un $\sgO_S$-module (c'est bien fonctoriel si l'on part du groupoïde des $\sgO_S$-modules).
+%Donnons quelques exemples, pour fixer les idées. Les foncteurs que nous utiliserons typiquement dans les constructions sont les produits tensoriels, extérieurs et symétriques des $\sgO_S$-modules, l'algèbre de Clifford d'un module quadratique, les endomorphismes d'un $\sgO_S$-module (c'est bien fonctoriel si l'on part du groupoïde des $\sgO_S$-modules).
 %Détaillons donc une structure qui nous servira dans la partie \ref{Groupesquadratiques_sec}, et qu'on appellera la structure de \emph{déploiement de Clifford}.
 %
 %Un déploiement de Clifford est la donnée d'un module quadratique $q$, d'un $\sgO_S$-module $P$ et d'un isomorphisme de $\sgO_S$-algèbres $\phi: \faisEnd_P \to \faisCliff_q$, des endomorphismes de $P$ vers l'algèbre de Clifford de $q$. Cela rentre dans le cadre précédent de la manière suivante:
@@ -1139,7 +1139,7 @@ on obtient une suite exacte longue en cohomologie
 \end{equation}
 où $\Htau^1(S,G)$ désigne l'ensemble des classes d'isomorphismes de $S$-torseurs sous $G$, pointé par $G$ lui-même. Les morphismes entre les points des groupes sont les morphismes évidents, les morphismes entre $\Htau^1$ sont induits par la fonctorialité \ref{fonctorialitegroupe_prop} et le morphisme $G_3(S)\to \Htau^1(S,G_1)$ envoie un point $s$ de $G_3(S)$ sur la fibre image réciproque de $s$ dans $G_2$, qui est naturellement un $G_1$-torseur. L'exactitude en $G_1(S)$ et $G_2(S)$ est en tant que groupes, alors que c'est en tant qu'ensembles pointés pour le reste de la suite. Voir \cite[Ch. III, prop. 3.3.1]{gir} pour la preuve de ces faits. 
 
-Dans certains cas, la suite exacte longue se prolonge à un ensemble $\Htau^2$, défini à l'aide de gerbes. Survolons donc la définition et les quelques propriétés des gerbes qui nous serviront à définir et à utiliser le groupe $\Htau^2(S,A)$ d'un schéma en groupes abéliens $A$ sur $S$. La référence de base \cite{gir} traîte ces questions dans un grand degré de généralité. Nous avons au contraire cherché à traduire autant que possible cette généralité dans les cas particuliers qui nous intéressent, ce qui nous conduit à énoncer des définitions dans un cadre beaucoup plus restreint, mais probablement plus familier au lecteur peu au fait de la cohomologie non abélienne.
+Dans certains cas, la suite exacte longue se prolonge à un ensemble $\Htau^2$, défini à l'aide de gerbes. Survolons donc la définition et les quelques propriétés des gerbes qui nous serviront à définir et à utiliser l'ensemble $\Htau^2(S,A)$ d'un schéma en groupes abéliens $A$ sur $S$. La référence de base \cite{gir} traite ces questions dans un grand degré de généralité. Nous avons au contraire cherché à traduire autant que possible cette généralité dans les cas particuliers qui nous intéressent, ce qui nous conduit à énoncer des définitions dans un cadre beaucoup plus restreint, mais probablement plus familier au lecteur peu au fait de la cohomologie non abélienne.
 
 \begin{defi}
 Une \emph{$S$-gerbe} est un $S$-champ $\cG$ pour lequel toutes les catégories $\cG_T$ sont des groupoïdes, et qui est: 
@@ -1188,7 +1188,7 @@ Le caractère essentiellement surjectif de $F$ se déduit alors de la condition de
 Une gerbe $(\cG,\iota)$ liée par $A$ est équivalente par un morphisme de gerbes liées par $A$ à la gerbe $\Tors{A}$ si et seulement si $\cG_S \neq \emptyset$.
 \end{lemm}
 \begin{proof}
-Puisque $(\Tors{A})_S$ contient l'objet $A$, un sens est évident. Pour l'autre, considérons $x \in \cG_S$. Alors le foncteur fibré $F$ donné par $F_T: y \mapsto \faisIso_{x_T,y}$ est bien un morphisme de gerbes liées par $A$.
+Puisque $\Tors{A}_S$ contient l'objet $A$, un sens est évident. Pour l'autre, considérons $x \in \cG_S$. Alors le foncteur fibré $F$ donné par $F_T: y \mapsto \faisIso_{x_T,y}$ est bien un morphisme de gerbes liées par $A$.
 \bap{Non, il y a un automorphisme qui traine.}
 \end{proof}
 \bap{Il faut une sorte de critère analogue pour deux gerbes équivalentes.}
@@ -1201,7 +1201,7 @@ La gerbe $\Tors{A}$ est naturellement liée par le groupe abélien $A$, car pour t
 L'ensemble pointé $\Htau^2(S,A)$ est l'ensemble des classes d'équivalences (de catégories fibrées) de gerbes liées par $A$, pointé par la classe de la gerbe $\Tors{A}$.
 \end{defi}
 
-\begin{exem}
+\begin{exem} \label{deuxbord_exem}
 Soit $B \to C$ un morphisme de $S$-faisceaux en groupes, et soit $Q$ un $C$-torseur. Un relèvement de $Q$ à $B$ est un couple $(P,p)$ où $P$ est un $B$-torseur, et $p$ est un morphisme de $C$-torseurs $P\contr{B} C \simeq Q$. Un morphisme de relèvements $(P_1,p_1) \to (P_2,p_2)$ est un morphisme de torseurs $\phi:P_1\to P_2$ tel que $p_2 \circ (\phi\contr{B} C) =p_1$. Le champ en groupoïdes dont la fibre sur $T$ est la catégorie des relèvements de $Q_T$ à $B_T$ est une gerbe liée par le noyau de $B \to C$. On la note $\deuxbord(P)$. 
 \bap{Le fait que le noyau de $B\to C$ est central dans $B$ et ne se tord donc pas par automorphisme intérieur de $B$ doit être ici essentiel, mais pourquoi? Le rajouter après vérification. En tout cas, Giraud insiste sur l'action de $B$ sur $A$ qui doit être triviale.}
 \end{exem}
@@ -1210,7 +1210,7 @@ En présence d'une suite exacte de $S$-faisceaux en groupes
 $$1 \to A \to B \to C\to 1$$
 où $A$ est central dans $B$ (condition portant sur les points), on définit un foncteur de la catégorie des $C$-torseurs vers celle des gerbes liées par $A$, en envoyant  un $C$-torseur $P$ sur la gerbe $\deuxbord(P)$ des relèvements de $P$ à $B$.
 
-\begin{defi}
+\begin{defi} \label{deuxbord_defi}
 Le foncteur précédent induit un morphisme d'ensembles pointés $\deuxbord: \Htau^1(G,C) \to \Htau^2(G,A)$ appelé \emph{second morphisme de bord}. 
 \end{defi}
 
@@ -1414,7 +1414,7 @@ $$T\mapsto A(T)^\times.$$
 Ce foncteur est représentable. 
 \end{prop}
 \begin{proof}
-Il est facile de voir que ce foncteur est un faisceau pour la topologie de Zariski, en utilisant que $A$ en est un. Par \ref{reprLocal_prop}, on peut donc supposer que $S=\Spec(R)$ et est connexe, et par la remarque \ref{Walg_rema} que $A=\wW(\tilde{B})$ où $B$ est une $R$-algèbre libre de rang fini comme $R$-module. Dans ce cas, le rang de $B$ comme $R$-module est constant. On peut donc définir une norme $N:B \to R$ en associant à un élément le déterminant de la multiplication à gauche par cet élément. Le foncteur de points de l'énoncé est alors représentable par le schéma affine $\Spec(\Symalg(B^\dual)[N^{-1}])$ où $\Symalg(B^\dual)$ est l'algèbre symmétrique sur $B^\dual=\Hom_R(B,R)$ et $N$ est l'élément de $\Symalg^n(B^\vee)$ correspondant à la norme définie ci-dessus. En effet
+Il est facile de voir que ce foncteur est un faisceau pour la topologie de Zariski, en utilisant que $A$ en est un. Par \ref{reprLocal_prop}, on peut donc supposer que $S=\Spec(R)$ et est connexe, et par la remarque \ref{Walg_rema} que $A=\wW(\tilde{B})$ où $B$ est une $R$-algèbre libre de rang fini comme $R$-module. Dans ce cas, le rang de $B$ comme $R$-module est constant. On peut donc définir une norme $N:B \to R$ en associant à un élément le déterminant de la multiplication à gauche par cet élément. Le foncteur de points de l'énoncé est alors représentable par le schéma affine $\Spec(\Symalg(B^\dual)[N^{-1}])$ où $\Symalg(B^\dual)$ est l'algèbre symétrique sur $B^\dual=\Hom_R(B,R)$ et $N$ est l'élément de $\Symalg^n(B^\vee)$ correspondant à la norme définie ci-dessus. En effet
 $$\Hom_{R-\text{alg}}(\Symalg(B^\dual),R')=\Hom_{R-\text{mod}}(B^\dual,R')=\Hom_{R-\text{mod}}(B^\dual,R)\otimes_R R'= B_{R'}$$
 où on a utilisé le fait que $B$ est libre pour les deux dernières égalités. Lorsqu'on remplace $\Symalg(B^\dual)$ par $\Symalg(B^\dual)[N^{-1}]$ à gauche, on obtient le sous-ensemble des morphismes qui envoie $N$ dans $R^\times$, et donc à droite $B_{R'}^\times$.
 \footnote{Si la multiplication à gauche par $a$ est inversible, il a un inverse à droite, donc la multiplication à droite par $a$ a un déterminant inversible, et est donc inversible, donc $a$ a un inverse à gauche.}
@@ -1433,7 +1433,7 @@ On a donc $\sgGm(T)=\Gamma(T)^\times$.
 \begin{defi} \label{mun_defi}
 Soit $\sgmu_{n,S}$, ou $\sgmu_n$, le noyau de l'application élévation à la puissance $n$ du schéma en groupes $\sgGmS{S}$ vers lui-même. 
 \end{defi}
-Pour tout schéma $T$ sur $S$, on a donc $\sgmu_n(T)=\{u\in \Gamma(T)^\times \text{ t.q. } u^n=1\}$. De plus, on voit facile de voir que sur une base affine $S=\Spec(R)$, le schéma en groupes $\sgmu_n$ est représenté par $\Spec(R[x]/x^n-1)$.
+Pour tout schéma $T$ sur $S$, on a donc $\sgmu_n(T)=\{u\in \Gamma(T)^\times \text{ t.q. } u^n=1\}$. De plus, il est facile de voir que sur une base affine $S=\Spec(R)$, le schéma en groupes $\sgmu_n$ est représenté par $\Spec(R[x]/(x^n-1))$. Il est donc représentable par la proposition \ref{reprLocal_prop}.
 C'est un cas particulier de groupe diagonalisable, voir \cite[Exp. VIII]{sga3} pour plus de détails, et il est lisse si et seulement si $n$ est premier aux caractéristiques résiduelles de $S$, voir \cite[Exp. VIII, prop. 2.1]{sga3}.
 
 \subsubsection{Torseurs sous $\sgGL_n$, $\sgGm$ et $\sgmu_n$.} \label{GLGmmunTors_sec}
@@ -1480,13 +1480,14 @@ Le module $n$-trivialisé \emph{trivial} est le couple $(\sgO_S,m)$ où $m:\sgO_S^
 \end{defi}
 
 \begin{lemm}
+\jean{Il me semble que la phrase "$\phi$ est localement une puissance $n$-ième" n'est pas tr\`es claire. Je pense que "$\phi:L^{\otimes n}\to \sgO_S$ factorise localement par $m:\sgO_S^{\otimes n} \to \sgO_S$" est plus transparente.}
 Pour toute topologie entre la topologie de Zariski et la topologie canonique telle que $\phi$ est localement une puissance $n$-ième, un module $n$-trivialisé $(L,\phi)$ est localement trivial, i.e. est une forme de $(\sgO_S,m)$, C'est toujours le cas pour la topologie \fppf. 
 \end{lemm}
 \begin{proof}
-La seule chose qui n'est pas évidente est l'affirmation sur la topologie \fppf: on commence par se restreindre à un ouvert Zariski sur lequel $L$ est trivial et la base est affine et vaut $\Spec(R)$, et il faut alors montrer que tout élément $\lambda\in R$ devient un carré après une extension \fppf. On prend l'extension évidente $R[x]/(x^n-\lambda)$. 
+La seule chose qui n'est pas évidente est l'affirmation sur la topologie \fppf: on commence par se restreindre à un ouvert Zariski sur lequel $L$ est trivial et la base est affine et vaut $\Spec(R)$, et il faut alors montrer que tout élément $\lambda\in R$ devient une puissance $n$-i\`eme après une extension \fppf. On prend l'extension évidente $R[x]/(x^n-\lambda)$. 
 \end{proof}
 
-On suppose maintenant que la topologie vérfie les conditions du lemme précédent.
+On suppose maintenant que la topologie vérifie les conditions du lemme précédent.
 
 Il est immédiat qu'on a $\sgAut^{\nTriv{n}}_{(\sgO_S,m)}=\sgmu_n$ où les objets sont dans le champ $\nTriv{n}$. On considère le faisceau $\faisIso_{(\sgO_S,m),(L,\phi)}$, torseur sous le précédent. Explicitement: 
 $$\faisIso_{(\sgO_S,m),(L,\phi)}(T) =\{r: \sgO_{T} \to L_{T},\ \phi_{T'} \circ r_{T'}^{\otimes n} = m_{T'},\ \forall T'\to T\}.$$ 
@@ -1547,13 +1548,18 @@ pour $j=1,\ldots,n$. On voit que $A/I$ représente $\foncStab_v$ et que ce foncte
 \end{proof}
 
 \begin{prop} \label{normalisateur_prop}
+\jean{L'\'enonc\'e ci-dessous ne fait pas de sens. Je suppose que tu voulais plut\^ot \'ecrire quelque chose comme \c ca: Soient $N$ un $\sgO_S$-module localement libre, et $M$ un sous-$\sgO_S$-module localement facteur direct de $N$. Alors le foncteur normalisateur $\foncNorm_{M}$, défini par
+% 
+$$\foncNorm_{M}(T)=\{g \in GL_N(T),\ g(M_{T'})=M_{T'},\ \forall T'\to T\}$$
+% 
+est un sous-groupe fermé représentable de $GL_N$. De plus, je ne comprends pas pourquoi tu as besoin de la condition $\forall T'\to T$ ci-dessus.}
 Soit $G$ un $S$-groupe algébrique, $N$ un $\sgO_S$-module localement libre, et $M$ un sous-$\sgO_S$-module localement facteur direct de $M$. Alors le foncteur normalisateur $\foncNorm_{\rho,M}$, défini par 
 $$\foncNorm_{\rho,N}(T)=\{g \in G(T),\ g(N_{T'})=N_{T'},\ \forall T'\to T\}$$ 
 est un sous-groupe fermé représentable de $G$.
 \end{prop}
 \begin{proof}
-Comme dans la proposition précédente, on se ramène au cas où $M$ et $N$ sont libres avec $N \simeq M \oplus M'$ et sur une base affine $\Spec(R)$. On choisit alors des bases $\{e_1,\ldots,e_m$ de $M$ et $\{e_{m+1},\ldots,e_{m+n}\}$ de $M'$, ce qui permet d'identifier $\sgGL_N$ avec $\sgGL_{m+n}$, représenté par $R[x_{ij},1 \leq i,j\leq m+n,\mathrm{det}^{-1}]$. Le groupe recherché est alors l'image réciproque par $\rho$ du sous-groupe fermé de $\sgGL_N$ défini par 
-l'idéal engendré par les $x_{ij}$ avec $1 \leq j < n+1 \leq i \leq n+m$. On conclue donc par la remarque \ref{imageinvnoyau_rema}.
+Comme dans la proposition précédente, on se ramène au cas où $M$ et $N$ sont libres avec $N \simeq M \oplus M'$ et sur une base affine $\Spec(R)$. On choisit alors des bases $\{e_1,\ldots,e_m\}$ de $M$ et $\{e_{m+1},\ldots,e_{m+n}\}$ de $M'$, ce qui permet d'identifier $\sgGL_N$ avec $\sgGL_{m+n}$, représenté par $R[x_{ij},1 \leq i,j\leq m+n,\mathrm{det}^{-1}]$. Le groupe recherché est alors l'image réciproque par $\rho$ du sous-groupe fermé de $\sgGL_N$ défini par 
+l'idéal engendré par les $x_{ij}$ avec $1 \leq j < n+1 \leq i \leq n+m$. On conclut donc par la remarque \ref{imageinvnoyau_rema}.
 \end{proof}
 
 
@@ -1582,6 +1588,7 @@ Soit $A$ un faisceau en $\sgO_S$-algèbres localement libres de type fini. Les co
 \end{enumerate}
 \end{prop}
 \begin{proof}
+\jean{Je suppose que tu voulais plut\^ot dire que le point 1. implique les points 2. et 3.}
 Le point \ref{locaffinesep_item} implique évidemment les points \ref{loczarsep_item} et \ref{locetsep_item}. Pour \ref{locaffinesep_item} $\Rightarrow$ \ref{loczarsep_item}, voir \cite[Ch. III, prop. 2.5]{kn-oj}. Enfin, pour \ref{locetsep_item} $\Rightarrow$ \ref{loczarsep_item}, voir \cite[Ch. III, prop. 2.2, (b)]{kn-oj}.  
 \end{proof}
 
@@ -1630,7 +1637,7 @@ Nous appellerons $\sgO_S$-algèbre étale finie un faisceau $Z$ en $\sgO_S$-algèbr
 \end{defi}
 
 \begin{prop} \label{algetfinies_prop}
-Les formes étales de la $\sgO_S$-algèbre $\sgO_S^n$ sont les $\sgO_S$-algèbres étales finies de rang $n$. Pour une telle forme $Z$, le faisceau $\faisAut^\alg_Z$ est un forme étale du faisceau en groupes constant $(\mathcal{S}_n)_S$ (groupe symmétrique).
+Les formes étales de la $\sgO_S$-algèbre $\sgO_S^n$ sont les $\sgO_S$-algèbres étales finies de rang $n$. Pour une telle forme $Z$, le faisceau $\faisAut^\alg_Z$ est un forme étale du faisceau en groupes constant $(\mathcal{S}_n)_S$ (groupe symétrique).
 \end{prop}
 \begin{proof}
 On vérifie que $\faisAut^\alg_{\sgO_S^n}=\mathcal{S}_n$ en utilisant les projecteurs canoniques de $\sgO_S^n$ qui doivent être permutés par un automorphisme. La deuxième affirmation de l'énoncé découle alors de la première par la proposition \ref{auttordus_prop}. 
@@ -1648,7 +1655,7 @@ Le fait que toute $\sgO_S$-algèbre étale finie de degré $n$ est localement $\sgO
 Si $Z$ est une $\sgO_S$-algèbre étale finie de rang $n=2$, $\faisAut^\alg_Z=(\ZZ/2)_S$ canoniquement. 
 \end{coro}
 \begin{proof}
-Le groupe symmétrique $\mathcal{S}_2 = \ZZ/2$ étant commutatif, ses tordus par des torseurs sous un groupe agissant par automorphismes intérieurs lui sont isomorphes.
+Le groupe symétrique $\mathcal{S}_2 = \ZZ/2$ étant commutatif, ses tordus par des torseurs sous un groupe agissant par automorphismes intérieurs lui sont isomorphes.
 \end{proof}
 
 \begin{rema}
@@ -1746,7 +1753,7 @@ $$\EndFonc:(\AVecn{A^{\opp}}{1})_\grpd\to \Azumayan{n}$$
 qui envoie un objet $M$ sur $\faisEnd_{M}$ (endomorphismes de $A^{\opp}$-modules) et un (iso)morphisme $f$ sur $\int_f$. 
 
 Le $A^{\opp}$-module $A_d$ qui est $A$ vu comme $A$-module à droite, et donc comme $A^{\opp}$-module à gauche est évidemment libre de rang $1$.
-Alors, dans le champ $\AVecn{A^{\opp}}{1}$ le faisceaux d'endomorphismes $\faisEnd_{A_d}$ est canoniquement isomorphe à $A$ (comme $\sgO_S$-algèbre) par $f \mapsto f(1)$. L'objet $A_d$ s'envoie donc sur $A$ par le foncteur $\EndFonc$.
+Alors, dans le champ $\AVecn{A^{\opp}}{1}$ le faisceau d'endomorphismes $\faisEnd_{A_d}$ est canoniquement isomorphe à $A$ (comme $\sgO_S$-algèbre) par $f \mapsto f(1)$. L'objet $A_d$ s'envoie donc sur $A$ par le foncteur $\EndFonc$.
 De plus, $\faisAut_{A_d}=\faisGL_{1,A}$, et le foncteur $\EndFonc$ induit la flèche canonique
 $$\faisGL_{1,A}=\faisAut^{\AVecn{A^{\opp}}{1}}_{A_d}\to \faisAut^{\Azumayan{n}}_A = \faisPGL_A.$$
 (les premiers automorphismes sont de $A^{\opp}$-modules, les seconds de $\sgO_S$-algèbres).
@@ -1784,11 +1791,11 @@ Pour finir, passons en revue différents types d'involutions sur des algèbres d'A
 Une algèbre d'Azumaya \emph{à involution de première espèce} sur un anneau $R$ est une algèbre d'Azumaya $A$ sur $R$ munie d'une involution $\sigma$ qui est $R$-linéaire. 
 \end{defi}
 
-Si $M$ est un $R$-module localement libre de type fini et $b:M \to M^\dual$ est un isomorphisme $\delta$-symmétrique ($b=\delta b^\dual \circ \bid$ où $\bid: M \to (M^\dual)^\dual$ est l'identification canonique, et $\delta \in \sgmu_2(R)$), autrement dit un $(M,b)$ est un module bilinéaire $\delta$-symmétrique non dégénéré \bap{renvoyer à plus loin}, alors on peut lui associer une involution $\sigma_b$ sur $A=\setEnd(M)$, donnée par $\sigma_b(x) = b^{-1} x^\dual b$.
+Si $M$ est un $R$-module localement libre de type fini et $b:M \to M^\dual$ est un isomorphisme $\delta$-symétrique ($b=\delta b^\dual \circ \bid$ où $\bid: M \to (M^\dual)^\dual$ est l'identification canonique, et $\delta \in \sgmu_2(R)$), autrement dit un $(M,b)$ est un module bilinéaire $\delta$-symétrique non dégénéré \bap{renvoyer à plus loin}, alors on peut lui associer une involution $\sigma_b$ sur $A=\setEnd(M)$, donnée par $\sigma_b(x) = b^{-1} x^\dual b$.
 \bap{Il est clair que si $\sigma_b = \sigma_{b'}$, alors $\int_b = \int_{b'}$ et donc $b=\lambda b'$ pour un certain $\lambda$ inversible, puisque le noyau de $\sgGL_n \to \sgPGL_n$ est bien $\sgGm$.}
 
 \begin{lemm}
-Localement pour la topologie étale, toute involution $\sigma$ de première espèce est isomorphe à une involution $\sigma_b$ pour une certaine forme bilinéaire $b$, qui est $\delta$-symmétrique pour un certain $\delta \in \sgmu_2(R)$, qui ne dépend que de l'involution de départ.
+Localement pour la topologie étale, toute involution $\sigma$ de première espèce est isomorphe à une involution $\sigma_b$ pour une certaine forme bilinéaire $b$, qui est $\delta$-symétrique pour un certain $\delta \in \sgmu_2(R)$, qui ne dépend que de l'involution de départ.
 \end{lemm}
 \begin{proof}
 On peut supposer que l'algèbre sous-jacente est $\setM_n(R)$ par \ref{Azumayaforme_prop}. La composition $\sigma \circ \transp(-)$ est un automorphisme de $\setM_n(R)$. Quitte à localiser encore $R$, il est donc intérieur (voir \ref{secPGLn_prop}), égal à $\int_b$ pour un certain $b \in \setGL_n(R)$. Or comme $\sigma^2=\id$, on doit avoir $\transp b b^{-1} \in \sgmu_2(R)$. L'élément $b$ est celui cherché, à l'identification canonique de $R^n$ avec $(R^n)^\dual$ près. Il n'est fixé qu'à un élément du centre près, le produit $b b^{-1}$ est donc canonique. Par recollement, on construit donc l'élément $\delta \in \sgmu_2(R)$ recherché, qui ne dépend que de $\sigma$. 
@@ -1814,7 +1821,7 @@ Le type d'un faisceau en algèbres d'Azumaya à involution de première espèce est 
 \end{defi}
 
 \begin{prop}
-Les $\sgO_S$-algèbres d'Azumaya de rang $n$ à involution de première espèce et de type orthogonal sont les formes (étales) de \bap{??? Attention, il doit en fait y avoir plusieurs classes, car l'involution associée à la forme bilinéaire hyperbolique ne peut pas être localement isomorphe à celle associée à la forme bilinéaire dont la matrice est l'identité, sinon les formes bilinéaires seraient localement proportionnelles, mais c'est faux, car l'une a une forme quadratique associée nulle modulo 2 et l'autre non. En fait, en rang pair, il faut probablement plutôt considérer les paires à involution (involution + forme trace des éléments symmétriques vers $\sgO_S$). Avant cela, il faut avoir montré que ces éléments symmétriques sont un module localement libre de rang $2n^2$ pour une involution orthogonale de degré $2n$. Il faut alors considérer le champ de ces paires, et voire qu'elles sont localement isomorphes à la paire canonique. En rang impair, il faut voir ce dont on a vraiment besoin. Peut-être pas d'involution.}
+Les $\sgO_S$-algèbres d'Azumaya de rang $n$ à involution de première espèce et de type orthogonal sont les formes (étales) de \bap{??? Attention, il doit en fait y avoir plusieurs classes, car l'involution associée à la forme bilinéaire hyperbolique ne peut pas être localement isomorphe à celle associée à la forme bilinéaire dont la matrice est l'identité, sinon les formes bilinéaires seraient localement proportionnelles, mais c'est faux, car l'une a une forme quadratique associée nulle modulo 2 et l'autre non. En fait, en rang pair, il faut probablement plutôt considérer les paires à involution (involution + forme trace des éléments symétriques vers $\sgO_S$). Avant cela, il faut avoir montré que ces éléments symétriques sont un module localement libre de rang $2n^2$ pour une involution orthogonale de degré $2n$. Il faut alors considérer le champ de ces paires, et voire qu'elles sont localement isomorphes à la paire canonique. En rang impair, il faut voir ce dont on a vraiment besoin. Peut-être pas d'involution.}
 Les $\sgO_S$-algèbres d'Azumaya de rang $n$ à involution de première espèce et de type symplectique sont les formes (étales) de \bap{??? Ici, on a peut-être plus de chances qu'il n'y ait qu'une classe.}. 
 \end{prop}
 \begin{proof}
@@ -1865,13 +1872,13 @@ Pour un $\sgO_S$-module localement libre de type fini, le morphisme canonique $\
 
 La somme orthogonale de deux modules bilinéaires $b_1$ et $b_2$ est notée $b_1\orth b_2$. Idem pour les modules quadratiques.
 
-On montre facilement que se donner un $\sgO_S$-module bilinéaire est équivalent à se donner un $\sgO_S$-module $M$ (loc. libre de type fini) et un morphisme $\phi:M \to M^\dual$. Ce $\sgO_S$-module sera symmétrique si $(\phi)^\dual \circ \bid_M=\phi$ et antisymmétrique si $(\phi)^\dual \circ \bid_M=-\phi$. 
+On montre facilement que se donner un $\sgO_S$-module bilinéaire est équivalent à se donner un $\sgO_S$-module $M$ (loc. libre de type fini) et un morphisme $\phi:M \to M^\dual$. Ce $\sgO_S$-module sera symétrique si $(\phi)^\dual \circ \bid_M=\phi$ et antisymétrique si $(\phi)^\dual \circ \bid_M=-\phi$. 
 
 Lorsque la base $S$ est égale à $\Spec(R)$, le foncteur $\tilde{(-)}$ induit une équivalence de catégorie entre les modules bilinéaires (resp. quadratiques) usuels sur $R$ et les $\sgO_S$-modules bilinéaires (resp. quadratiques). 
 
-Un module quadratique $q$ vient par définition avec un \emph{module polaire associé} $b_q$, qui est un module bilinéaire symmétrique. Sur les points, il s'agit de $b_q(x,y)=q(x+y)-q(x)-q(y)$.
+Un module quadratique $q$ vient par définition avec un \emph{module polaire associé} $b_q$, qui est un module bilinéaire symétrique. Sur les points, il s'agit de $b_q(x,y)=q(x+y)-q(x)-q(y)$.
 
-De même, partant d'un module module bilinéaire $b$, on obtient un module quadratique associé $q_b$ en précomposant le morphisme bilinéaire $M \times M \to M$ par l'applicatin diagonale $M \to M \times M$. On a $q_{b_q} = 2 q$ et si $b$ est symmétrique, $b_{q_b}=2b$. Ces deux constructions sont clairement fonctorielles.
+De même, partant d'un module module bilinéaire $b$, on obtient un module quadratique associé $q_b$ en précomposant le morphisme bilinéaire $M \times M \to M$ par l'applicatin diagonale $M \to M \times M$. On a $q_{b_q} = 2 q$ et si $b$ est symétrique, $b_{q_b}=2b$. Ces deux constructions sont clairement fonctorielles.
 
 \begin{defi}
 Nous utiliserons la notation usuelle $\fq{a_1,a_2,\ldots,a_n}$ pour désigner le module quadratique diagonal d'équation $a_1 x_1^2 + \cdots + a_n x_n^2$ sur $\sgO_S^n$. Pour les modules bilinéaires, nous utiliserons la même notation pour désigner le module d'équation $a_1 x_1 y_1 +a_2x_2 y_2+\dots a_n x_n y_n$ sur $\sgO_S^n$.
@@ -1906,7 +1913,7 @@ Le foncteur $b \mapsto q_b$ induit une équivalence de catégories des modules bil
 \end{rema}
 
 \begin{defi} \label{hyperbolique_defi}
-Le $\sgO_S$-module bilinéaire sur $M \oplus M^\dual$ donné par la matrice $\left(\begin{smallmatrix} 0 & 1 \\ \bid_M & 0 \end{smallmatrix} \right)$ est symmétrique et sera noté $\hyps_M$. De même, le module bilinéaire donnée par la matrice $\left(\begin{smallmatrix} 0 & 1 \\ -\bid_M & 0 \end{smallmatrix}\right)$ est antisymmétrique et sera noté $\hypa_M$. On les appelle respectivement module hyperbolique bilinéaire symmétrique et antisymmétrique. Le module quadratique hyperbolique sur $M \oplus M^\dual$, noté $\hypq_M$, est donné par l'évaluation $\hypq_M(m,e)=e(m)$ sur les points.
+Le $\sgO_S$-module bilinéaire sur $M \oplus M^\dual$ donné par la matrice $\left(\begin{smallmatrix} 0 & 1 \\ \bid_M & 0 \end{smallmatrix} \right)$ est symétrique et sera noté $\hyps_M$. De même, le module bilinéaire donnée par la matrice $\left(\begin{smallmatrix} 0 & 1 \\ -\bid_M & 0 \end{smallmatrix}\right)$ est antisymétrique et sera noté $\hypa_M$. On les appelle respectivement module hyperbolique bilinéaire symmétrique et antisymétrique. Le module quadratique hyperbolique sur $M \oplus M^\dual$, noté $\hypq_M$, est donné par l'évaluation $\hypq_M(m,e)=e(m)$ sur les points.
 Lorsque $M=\sgO_S^n$, on utilise les notations $\hyps_{2n}$, $\hypa_{2n}$ et $\hypq_{2n}$. 
 \end{defi}
 Attention, on a $b_{\hypq_M}=\hyps_M$ mais $q_{\hyps_M}=2 \hypq_M$.
@@ -1990,7 +1997,7 @@ $$\nTriv{2}_{\simeq} \isoto \Tors{\sgmu_n}.$$
 \end{prop}
 Notons enfin:
 \begin{lemm}
-Deux $(L_1,\phi)$ et $(L_2,\phi_2)$ sont isomorphes si et seulement s'il existe un isomorphisme $\psi: L_1 \simeq L_2$ et si $\phi_1^{-1} \psi^{\otimes 2} \phi_2(1)$ est un carré de $\sgGm(S)$. 
+Deux $(L_1,\phi_1)$ et $(L_2,\phi_2)$ sont isomorphes si et seulement s'il existe un isomorphisme $\psi: L_1 \simeq L_2$ et si $\phi_1^{-1} \psi^{\otimes 2} \phi_2(1)$ est un carré de $\sgGm(S)$. 
 \end{lemm}
 \begin{proof}
 Un sens est évident, et dans l'autre, s'il existe un tel $\phi$, on peut le modifier par une racine carrée de l'élément de $\sgGm(S)$ pour le corriger en un morphisme de module déterminants.
@@ -2885,10 +2892,12 @@ dans laquelle $\Het^1(S,\sgGm)$ et $\Het^1(S,\sgGL_{1,A})$ s'identifient par la 
 
 Le morphisme $\Het^1(S,\sgGm)\to \Het^1(S,\sgGL_{1,A})$ est induit par le foncteur $\Vecn{1}\to \AVecn{1}{A^{\opp}}$ qui envoie un fibré en droites $L$ sur $L \otimes A_d$, vu comme $A^{\opp}$-module par l'action à droite de $A$ sur $A_d$. 
 
-Le morphisme $\Het^1(S,\sgGL_{1,A})\to \Het^1(S,\sgPGL_A)$ est induit par le foncteur $\EnfFonc$, décrit juste avant après la proposition \ref{GL1Atorseurs}. 
+Le morphisme $\Het^1(S,\sgGL_{1,A})\to \Het^1(S,\sgPGL_A)$ est induit par le foncteur $\EndFonc$, décrit juste avant après la proposition \ref{GL1Atorseurs_prop}. 
 
-Enfin, le morphisme $\Het^1(S,\sgPGL_A) \to \Het^2(S,\sgGm)$, défini en \ref{}
+Enfin, le morphisme $\Het^1(S,\sgPGL_A) \to \Het^2(S,\sgGm)$ est induit par le foncteur ``gerbe des relèvements'', défini en \ref{deuxbord_exem}. On obtient donc qu'une $\sgO_S$-algèbre d'Azumaya $B$ est envoyée sur la gerbe dont la fibre en $T$ est constituée des relèvements $(M,\phi)$, où $M$ est un $A^{\opp}$-module, et $\phi:\faisEnd^{A^{\opp}\text{-mod}}_M \isoto B$ est un isomorphisme de $\sgO_S$-algèbres d'Azumaya. On reconnaît donc la gerbe $A^{\opp}$-$\gerban(B)$ des $A^{\opp}$-banalisations de $B$ définie en \ref{banalisation_defi}. 
+\medskip
 
+\bap{Revoir cette fin de partie à la lumière des champs, et faire le cas $\sgSL_A$.}
 Passons maintenant à la suite exacte courte
 $$1 \to \sgSL_n \to \sgGL_n \to \sgGm \to 1$$
 qui donne la suite exacte longue
@@ -2897,7 +2906,6 @@ qui donne la suite exacte longue
 \to \Het^1(S,\sgSL_n) \to \Het^1(S,\sgGL_n) \to \Het^1(S,\sgGm)
 \end{multline*}
 Outre les précédentes identifications, on peut également voir $\Het^1(S,\sgSL_n)$ comme l'ensemble des classes d'isomorphismes de couples $(M,d)$ où $M$ est un fibré de rang $M$ et $d:\Det{M} \to \sgO_S$ est un isomorphisme. L'homomorphisme de connexion envoie alors un élément $d \in \Gamma(S)^\times$ sur le couple $(\sgO_S^{\oplus n},d)$. Le morphisme suivant oublie $d$, et le dernier envoie un fibré sur son déterminant. 
-\bap{En fait, il faut revoir cette partie à la lumière des lemmes sur les champs.}
 
 %\subsection{Variétés projectives homogènes}
 %
@@ -2909,7 +2917,7 @@ Outre les précédentes identifications, on peut également voir $\Het^1(S,\sgSL_n)
 %
 %\bap{Cas intérieur? Pas d'involution.}
 %
-%\bap{Cas quasi-déployé? Ça doit être le cas où le parabolique est symmétrique par réflexion centrale du diagramme de Dynkin, et donc fixé par l'automorphisme extérieur? Et alors, que se passe-t-il dans ce cas?}
+%\bap{Cas quasi-déployé? Ça doit être le cas où le parabolique est symétrique par réflexion centrale du diagramme de Dynkin, et donc fixé par l'automorphisme extérieur? Et alors, que se passe-t-il dans ce cas?}
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3148,7 +3156,7 @@ $$
 %\end{enumerate}
 \end{lemm}
 %\begin{proof}
-%On montre d'abord le point \ref{detOq_item} lorsque $q=h=\hypq_{2n}$. C'est un calcul immédiat sur les points: la matrice $A$ d'un élément de $\faisorthO_h$ doit préserver le module polaire associé, dont la matrice symmétrique $H$ est de déterminant $(-1)^n$, donc inversible. De l'équation $\transp{A} M A =M$ on tire donc que $\det(A)^2 =1$. On le montre ensuite pour $q=h=\hypq_{2n+1}$: puisque le radical polaire est préservé, le déterminant de la matrice $A$ est le produit du déterminant d'une matrice $A'$ qui tombe dans le cas précédent, et d'un coefficient de carré $1$. Enfin, on considère les formes de ces deux dernières situations: un élément qui est localement de carré $1$ pour la topologie étale est de carré $1$. 
+%On montre d'abord le point \ref{detOq_item} lorsque $q=h=\hypq_{2n}$. C'est un calcul immédiat sur les points: la matrice $A$ d'un élément de $\faisorthO_h$ doit préserver le module polaire associé, dont la matrice symétrique $H$ est de déterminant $(-1)^n$, donc inversible. De l'équation $\transp{A} M A =M$ on tire donc que $\det(A)^2 =1$. On le montre ensuite pour $q=h=\hypq_{2n+1}$: puisque le radical polaire est préservé, le déterminant de la matrice $A$ est le produit du déterminant d'une matrice $A'$ qui tombe dans le cas précédent, et d'un coefficient de carré $1$. Enfin, on considère les formes de ces deux dernières situations: un élément qui est localement de carré $1$ pour la topologie étale est de carré $1$. 
 %
 %Le point \ref{pousseP_item} est une application de \ref{foncttors_prop}, point \ref{fonctobjet_item}. 
 %
