@@ -1644,7 +1644,7 @@ Nous appellerons $\sgO_S$-algèbre étale finie un faisceau $Z$ en $\sgO_S$-algèbr
 Les formes étales de la $\sgO_S$-algèbre $\sgO_S^n$ sont les $\sgO_S$-algèbres étales finies de rang $n$. Pour une telle forme $Z$, le faisceau $\faisAut^\alg_Z$ est un forme étale du faisceau en groupes constant $(\mathcal{S}_n)_S$ (groupe symétrique).
 \end{prop}
 \begin{proof}
-On vérifie que $\faisAut^\alg_{\sgO_S^n}=\mathcal{S}_n$ en utilisant les projecteurs canoniques de $\sgO_S^n$ qui doivent être permutés par un automorphisme. La deuxième affirmation de l'énoncé découle alors de la première par la proposition \ref{auttordus_prop}. 
+On dispose d'un morphisme évident $\mathcal{S}_n\to \faisAut^\alg_{\sgO_S^n}$ dont on vérifie facilement qu'il est un isomorphisme localement. La deuxième affirmation de l'énoncé découle alors de la première par la proposition \ref{auttordus_prop}. 
 
 Les propriétés d'être étale, finie et localement libre de rang $n$ sont locales pour la topologie étale, donc toute forme étale de $\sgO_S^n$ est encore étale finie de rang $n$.
 
@@ -2249,6 +2249,7 @@ Soit $g\in G$. Par descente plate de la lissité \cite[Exp. II, cor. 4.13]{sga1},
 \end{proof}
 
 \begin{prop} \label{lissite_prop}
+\jean{Modifier l'énoncé avec $S=\Spec \mathbb Z$}
 Soit $G$ un groupe algébrique localement de présentation finie sur une base $S$ réduite, dont les fibres sont lisses, connexes et de dimension localement constante. Alors $G$ est lisse sur $S$.
 \end{prop}
 \begin{proof}
@@ -2661,7 +2662,7 @@ Les deux groupes de droite sont isomorphes au groupe (localement) constant $(\ZZ
 Pour $n\leq 2$, le groupe $\sgPGL_n$ n'a pas d'automorphisme extérieur. On a le même diagramme, mais la flèche $\phi$ n'est pas un isomorphisme, et la flèche de droite est la projection vers le groupe trivial. 
 \end{theo}
 \begin{proof}
-Toutes les affirmations étant Zariski locales sur la base $S$, on peut supposer $S=\Spec(R)$ connexe.
+Toutes les affirmations étant Zariski locales sur la base $S$, on peut supposer $S=\Spec(R)$ où $R$ est un anneau local.
 Le carré de gauche commute par construction, et l'affirmation sur le scindage se vérifie immédiatement par calcul. 
 Le groupe $\sgPGL_1$ est trivial et $\sgPGL_2$ n'a pas d'automorphisme extérieur car le diagramme de Dynkin est un point. Il n'y a donc rien de plus à justifier pour $n=1,2$. 
 Supposons donc $n\geq 3$. Les deux groupes de droite sont bien isomorphes au groupe constant $(\ZZ/2)_R$. C'est évident pour $\sgAut_{R \times R,\exch}$, et cela découle de l'interprétation de $\sgAutExt$ en termes d'automorphismes du diagramme de Dynkin, voir \cite[Exp. XXIV, th. 1.3 (iii)]{sga3}.
