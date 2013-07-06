@@ -1414,7 +1414,7 @@ $$T\mapsto A(T)^\times.$$
 Ce foncteur est représentable. 
 \end{prop}
 \begin{proof}
-Il est facile de voir que ce foncteur est un faisceau pour la topologie de Zariski, en utilisant que $A$ en est un. Par \ref{reprLocal_prop}, on peut donc supposer que $S=\Spec(R)$, et par la remarque \ref{Walg_rema} que $A=\wW(\tilde{B})$ où $B$ est une $R$-algèbre libre de rang fini comme $R$-module. On peut donc définir une norme $N:B \to R$ en associant à un élément le déterminant de la multiplication à gauche par cet élément. Le foncteur de points de l'énoncé est alors représentable par le schéma affine $\Spec(\Symalg(B^\dual)[N^{-1}])$ où $\Symalg(B^\dual)$ est l'algèbre symétrique sur $B^\dual=\Hom_R(B,R)$ et $N$ est l'élément de $\Symalg^n(B^\vee)$ correspondant à la norme définie ci-dessus. En effet
+Il est facile de voir que ce foncteur est un faisceau pour la topologie de Zariski, en utilisant que $A$ en est un. Par \ref{reprLocal_prop}, on peut donc supposer que $S=\Spec(R)$ et est connexe, et par la remarque \ref{Walg_rema} que $A=\wW(\tilde{B})$ où $B$ est une $R$-algèbre libre de rang fini comme $R$-module. Dans ce cas, le rang de $B$ comme $R$-module est constant. On peut donc définir une norme $N:B \to R$ en associant à un élément le déterminant de la multiplication à gauche par cet élément. Le foncteur de points de l'énoncé est alors représentable par le schéma affine $\Spec(\Symalg(B^\dual)[N^{-1}])$ où $\Symalg(B^\dual)$ est l'algèbre symétrique sur $B^\dual=\Hom_R(B,R)$ et $N$ est l'élément de $\Symalg^n(B^\vee)$ correspondant à la norme définie ci-dessus. En effet
 $$\Hom_{R-\text{alg}}(\Symalg(B^\dual),R')=\Hom_{R-\text{mod}}(B^\dual,R')=\Hom_{R-\text{mod}}(B^\dual,R)\otimes_R R'= B_{R'}$$
 où on a utilisé le fait que $B$ est libre pour les deux dernières égalités. Lorsqu'on remplace $\Symalg(B^\dual)$ par $\Symalg(B^\dual)[N^{-1}]$ à gauche, on obtient le sous-ensemble des morphismes qui envoie $N$ dans $R^\times$, et donc à droite $B_{R'}^\times$.
 \footnote{Si la multiplication à gauche par $a$ est inversible, il a un inverse à droite, donc la multiplication à droite par $a$ a un déterminant inversible, et est donc inversible, donc $a$ a un inverse à gauche.}
@@ -1481,7 +1481,8 @@ Le module $n$-trivialisé \emph{trivial} est le couple $(\sgO_S,m)$ où $m:\sgO_S^
 
 \begin{lemm}
 \jean{Il me semble que la phrase "$\phi$ est localement une puissance $n$-ième" n'est pas tr\`es claire. Je pense que "$\phi:L^{\otimes n}\to \sgO_S$ factorise localement par $m:\sgO_S^{\otimes n} \to \sgO_S$" est plus transparente.}
-Pour toute topologie entre la topologie de Zariski et la topologie canonique telle que $\phi$ est localement une puissance $n$-ième, un module $n$-trivialisé $(L,\phi)$ est localement trivial, i.e. est une forme de $(\sgO_S,m)$, C'est toujours le cas pour la topologie \fppf. 
+\bap{J'ai mis les deux, du coup. Efface ces deux commentaires si tu es d'accord.}
+Pour toute topologie entre la topologie de Zariski et la topologie canonique telle que $\phi$ est localement une puissance $n$-ième, \ie $\phi:L^{\otimes n}\to \sgO_S$ factorise localement par $m:\sgO_S^{\otimes n} \to \sgO_S$, un module $n$-trivialisé $(L,\phi)$ est localement trivial, i.e. est une forme de $(\sgO_S,m)$, C'est toujours le cas pour la topologie \fppf. 
 \end{lemm}
 \begin{proof}
 La seule chose qui n'est pas évidente est l'affirmation sur la topologie \fppf: on commence par se restreindre à un ouvert Zariski sur lequel $L$ est trivial et la base est affine et vaut $\Spec(R)$, et il faut alors montrer que tout élément $\lambda\in R$ devient une puissance $n$-i\`eme après une extension \fppf. On prend l'extension évidente $R[x]/(x^n-\lambda)$. 
@@ -1515,8 +1516,8 @@ Soit $A$ une $\sgO_S$-algèbre localement libre de type fini, mais non nécessaire
 est représentable par un schéma en groupes affine sur $S$ et de type fini, qui est un sous-groupe fermé de $\sgGL_{A}$ ($A$ est vu comme $\sgO_S$-module, ici).
 \end{prop}
 \begin{proof}
-C'est un faisceau Zariski puisque $A$ en est un. On se ramène donc au cas $S=\Spec(R)$ affine et $A$ libre comme $\sgO_S$-module, avec $A=\wW(\tilde{B})$.
-Considérons alors le $R$-module $M=\Hom_R(B \otimes_R B, B)$ et l'élément $m$ qui y représente la multiplication de $B$. Le stabilisateur de $m$ est représentable par un sous-schéma en groupes fermé de $\sgGL_{\wW(\tilde{M})}$, par \cite[Exp. I, \S 6.7]{sga3}. Définissons un morphisme $\sgGL_{A} \to \sgGL_{\wW(\tilde{M})}$ en envoyant un élément $\alpha$ des points de $\sgGL_{A}(T)$ sur l'endomorphisme de $M_T$ qui à un morphisme $f:B_T \otimes B_T \to B_T$ associe le morphisme $\alpha \circ f \circ (\alpha^{-1} \otimes \alpha^{-1})$. L'image réciproque du stabilisateur de $m$ est le foncteur en groupes de l'énoncé, et il est représentable par la remarque \ref{imageinvnoyau_rema}.
+C'est un faisceau Zariski puisque $A$ en est un. On se ramène donc au cas $S=\Spec(R)$ affine connexe et $A$ libre comme $\sgO_S$-module, avec $A=\wW(\tilde{B})$.
+Considérons alors le $R$-module $M=\Hom_R(B \otimes_R B, B)$ et l'élément $m$ qui y représente la multiplication de $B$. Le stabilisateur de $m$ est représentable par un sous-schéma en groupes fermé de $\sgGL_{\wW(\tilde{M})}$, par \cite[Exp. I, \S 6.7]{sga3}. Définissons un morphisme $\sgGL_{A} \to \sgGL_{\wW(\tilde{M})}$ en envoyant un élément $\alpha$ des points de $\sgGL_{A}$ sur l'endomorphisme de $M$ qui à un morphisme $f:B \otimes B \to B$ associe le morphisme $\alpha \circ f \circ (\alpha^{-1} \otimes \alpha^{-1})$. L'image réciproque du stabilisateur de $m$ est le foncteur en groupes de l'énoncé, et il est représentable par la remarque \ref{imageinvnoyau_rema}.
 \end{proof}
 
 \begin{defi} \label{PGLA_defi}
@@ -1552,7 +1553,11 @@ pour $j=1,\ldots,n$. On voit que $A/I$ représente $\foncStab_v$ et que ce foncte
 % 
 $$\foncNorm_{M}(T)=\{g \in GL_N(T),\ g(M_{T'})=M_{T'},\ \forall T'\to T\}$$
 % 
-est un sous-groupe fermé représentable de $GL_N$. De plus, je ne comprends pas pourquoi tu as besoin de la condition $\forall T'\to T$ ci-dessus.}
+est un sous-groupe fermé représentable de $GL_N$.}
+\bap{Vu là où je m'en sers, j'ai manifestement besoin du cas où on a une représentation $\rho: G \to \sgGL_N$, qui se déduit bien entendu du cas comme tu as énoncé par pull-back. J'ai juste oublié de parler de $\rho$ dans l'énoncé...} 
+\jean{De plus, je ne comprends pas pourquoi tu as besoin de la condition $\forall T'\to T$ ci-dessus.}
+\bap{Cette condition doit de toutes manières être vérifiée, sinon ça n'est même pas un (sous-)foncteur de points, car les $T$-points ne s'envoient pas forcément dans les $T'$-points. Est-ce que tu prétends qu'elle est automatiquement vérifiée si on impose seulement la condition sur les $T$-points? Je ne le vois pas immédiatement. Si ce n'est pas clair, réglons cela par skype.}
+\bap{Enfin, pour finir, je ne cite ce théorème qu'à un endroit qui va bientôt disparaître de la nouvelle version, je pense.}
 Soit $G$ un $S$-groupe algébrique, $N$ un $\sgO_S$-module localement libre, et $M$ un sous-$\sgO_S$-module localement facteur direct de $M$. Alors le foncteur normalisateur $\foncNorm_{\rho,M}$, défini par 
 $$\foncNorm_{\rho,N}(T)=\{g \in G(T),\ g(N_{T'})=N_{T'},\ \forall T'\to T\}$$ 
 est un sous-groupe fermé représentable de $G$.
@@ -1588,8 +1593,7 @@ Soit $A$ un faisceau en $\sgO_S$-algèbres localement libres de type fini. Les co
 \end{enumerate}
 \end{prop}
 \begin{proof}
-\jean{Je suppose que tu voulais plut\^ot dire que le point 1. implique les points 2. et 3.}
-Le point \ref{locaffinesep_item} implique évidemment les points \ref{loczarsep_item} et \ref{locetsep_item}. Pour \ref{locaffinesep_item} $\Rightarrow$ \ref{loczarsep_item}, voir \cite[Ch. III, prop. 2.5]{kn-oj}. Enfin, pour \ref{locetsep_item} $\Rightarrow$ \ref{loczarsep_item}, voir \cite[Ch. III, prop. 2.2, (b)]{kn-oj}.  
+Le point \ref{loczarsep_item} implique évidemment les points \ref{locaffinesep_item} et \ref{locetsep_item}. Pour \ref{locaffinesep_item} $\Rightarrow$ \ref{loczarsep_item}, voir \cite[Ch. III, prop. 2.5]{kn-oj}. Enfin, pour \ref{locetsep_item} $\Rightarrow$ \ref{loczarsep_item}, voir \cite[Ch. III, prop. 2.2, (b)]{kn-oj}.  
 \end{proof}
 
 \begin{defi}
@@ -1878,7 +1882,7 @@ Lorsque la base $S$ est égale à $\Spec(R)$, le foncteur $\tilde{(-)}$ induit une
 
 Un module quadratique $q$ vient par définition avec un \emph{module polaire associé} $b_q$, qui est un module bilinéaire symétrique. Sur les points, il s'agit de $b_q(x,y)=q(x+y)-q(x)-q(y)$.
 
-De même, partant d'un module module bilinéaire $b$, on obtient un module quadratique associé $q_b$ en précomposant le morphisme bilinéaire $M \times M \to \sgO_S$ par l'applicatin diagonale $M \to M \times M$. On a $q_{b_q} = 2 q$ et si $b$ est symétrique, $b_{q_b}=2b$. Ces deux constructions sont clairement fonctorielles.
+De même, partant d'un module module bilinéaire $b$, on obtient un module quadratique associé $q_b$ en précomposant le morphisme bilinéaire $M \times M \to M$ par l'applicatin diagonale $M \to M \times M$. On a $q_{b_q} = 2 q$ et si $b$ est symétrique, $b_{q_b}=2b$. Ces deux constructions sont clairement fonctorielles.
 
 \begin{defi}
 Nous utiliserons la notation usuelle $\fq{a_1,a_2,\ldots,a_n}$ pour désigner le module quadratique diagonal d'équation $a_1 x_1^2 + \cdots + a_n x_n^2$ sur $\sgO_S^n$. Pour les modules bilinéaires, nous utiliserons la même notation pour désigner le module d'équation $a_1 x_1 y_1 +a_2x_2 y_2+\dots a_n x_n y_n$ sur $\sgO_S^n$.
@@ -1905,7 +1909,7 @@ La situation en rang un est la suivante.
 Le foncteur $b \mapsto q_b$ induit une équivalence de catégories des modules bilinéaires de rang $1$ vers les modules quadratiques de rang $1$.
 \end{prop}
 \begin{proof}
-\'Etant donné un module quadratique $q$ sur un $\sgO_S$-module localement libre de rang $1$ , construisons une forme bilinéaire $b$ telle que $q_b\simeq q$. Lorsque $L$ est libre de rang $1$ et que $e$ est une base de $\sgO_S(S)$, l'application $q$ est entièrement déterminée par l'image $q(e)$, et on choisit la forme bilinéaire donnée sur les points par $(xe,ye)\mapsto xyq(e)$; cette forme est indépendante du choix de $e$. Pour un $L$ quelconque, on prend un recouvrement ouvert Zariski qui trivialise $L$, et on construit $b$ par recollement à partir du cas précédent; l'isomorphisme $q\simeq q_b$ peut se tester localement. Cela montre que le foncteur est essentiellement surjectif. Il est fidèle puisque les modules sous-jacents ne changent pas, et on vérifie qu'il est plein en localisant à nouveau à des ouverts Zariski. 
+\'Etant donné un module module quadratique $q$ sur un $\sgO_S$-module localement libre de rang $1$ , construisons une forme bilinéaire $b$ telle que $q_b\simeq q$. Lorsque $L$ est libre de rang $1$ et que $e$ est une base de $\sgO_S(S)$, l'application $q$ est entièrement déterminée par l'image $q(e)$, et on choisit la forme bilinéaire donnée sur les points par $(xe,ye)\mapsto xyq(e)$; cette forme est indépendante du choix de $e$. Pour un $L$ quelconque, on prend un recouvrement ouvert Zariski qui trivialise $L$, et on construit $b$ par recollement à partir du cas précédent; l'isomorphisme $q\simeq q_b$ peut se tester localement. Cela montre que le foncteur est essentiellement surjectif. Il est fidèle puisque les modules sous-jacents ne changent pas, et on vérifie qu'il est plein en localisant à nouveau à des ouverts Zariski. 
 \end{proof}
 
 \begin{rema}
@@ -2027,9 +2031,8 @@ Lorsque $a$ et $b$ sont inversibles, on peut alors vérifier que sur $T$, $(t e_1
 \end{proof}
 
 \begin{prop}
-Sur un anneau local, un module quadratique de rang pair est régulier si et seulement s'il est isomorphe à une somme directe de modules de la forme $[a,b]$ ci-dessus avec $1-ab$, $a$ et $b$ dans $\Gamma(S)^\times$. \jean{Est-ce que ce n'est pas plutôt $1-4ab, a, b\in \Gamma(S)^\times$?}
+Sur un anneau local, un module quadratique de rang pair est régulier si et seulement s'il est isomorphe à une somme directe de modules de la forme $[a,b]$ ci-dessus avec $1-ab$, $a$ et $b$ dans $\Gamma(S)^\times$. 
 \end{prop}
-
 \begin{proof}
 Voir \cite[Ch. IV, lemme 2.2.2]{knus}. La preuve est essentiellement qu'on peut prouver ce type de décomposition sur un corps, puis la relever du corps résiduel à l'anneau local par le lemme de Nakayama.
 \end{proof}
@@ -2158,7 +2161,7 @@ Dans \cite[Exp. II]{sga3}, l'algèbre de Lie $\sgLie_G$ d'un schéma en groupes $G
 }
 \end{equation}
 qui identifie $\sgLie_G(T)$ au noyau du morphisme $p$, et où $p$ et $s$ sont induits par les deux morphismes mentionnés plus haut entre $S$ et $\sgDual_S$.
-Le foncteur $\sgLie_G$ s'identifie (par 3.3) à la fibration vectorielle $\vV(\omega^1_{G/S})$, au sens de \cite[Exp. I, déf. 4.6.1]{sga3}, associée au $\cO_S$-module cohérent $\omega^1_{G/S}$ des différentielles relatives de $G$ par rapport à $S$ tiré à $S$ par la section unité. En particulier, ce foncteur est représentable, et est muni d'une structure de $\sgO_S$-module. Son crochet de Lie est défini (en 4.7.2) par l'intermédiaire de la représentation adjointe, et $G\mapsto \sgLie_G$ définit naturellement un foncteur des schémas en groupes vers les $\sgO_S$-modules munis d'une loi de composition bilinéaire (voir \cite[Exp. II, (i) avant la prop. 4.8]{sga3}). 
+Le foncteur $\sgLie_G$ s'identifie (par 3.3) à la fibration vectorielle$\vV(\omega^1_{G/S})$, au sens de \cite[Exp. I, déf. 4.6.1]{sga3}, associée au $\cO_S$-module cohérent $\omega^1_{G/S}$ des différentielles relatives de $G$ par rapport à $S$ tiré à $S$ par la section unité. En particulier, ce foncteur est représentable, et est muni d'une structure de $\sgO_S$-module. Son crochet de Lie est défini (en 4.7.2) par l'intermédiaire de la représentation adjointe, et $G\mapsto \sgLie_G$ définit naturellement un foncteur des schémas en groupes vers les $\sgO_S$-modules munis d'une loi de composition bilinéaire (voir \cite[Exp. II, (i) avant la prop. 4.8]{sga3}). 
 
 \begin{prop} \label{LieOS_prop}
 Dans le cas du groupe additif sous-jacent au $\sgO_S$-module $\sgO_S$ lui-même, on a les identifications $\sgTan_{\sgO_S}= \sgO_S[t]/t^2$ et $\sgLie_{\sgO_S}=\sgO_S$, muni du crochet nul.
@@ -2200,7 +2203,7 @@ Le fait que c'est un sous-$\sgO_S$-module est clair par la définition utilisant 
 Soit $A$ une $\sgO_S$-algèbre associative et unitaire (mais non nécessairement commutative), localement libre comme $\sgO_S$-module et telle que $\sgO_S$ est central dans $A$. On note $\alL_A$ le foncteur en algèbres de Lie de $\sgO_S$-module sous-jacent $A$ et de crochet $[a,b]=ab-ba$. 
 
 \begin{prop} \label{LieGLn_prop}
-L'algèbre de Lie $\sgLie_{\sgGL_{1,A}}$ est isomorphe à $\alL_A$, et par cet isomorphisme, la représentation adjointe correspond à la conjugaison.
+L'algèbre de Lie $\sgLie_{\sgGL_{1,A}}$ est isomorphe $\alL_A$, et par cet isomorphisme, la représentation adjointe correspond à la conjugaison.
 \end{prop}
 \begin{proof}
 Le morphisme naturel $A\otimes_{\sgO_S} \sgTan_{\sgO_S} \to \sgTan_A$ est un isomorphisme de $\sgO_S$-modules car $A$ est localement libre (voir \cite[Exp. II, 4.4.2]{sga3}). Cela permet d'identifier l'espace tangent $\sgTan_A(T)=A(I_{T})=A(T)[t]/t^2$, et la suite \eqref{seLie_eq} pour $G=\sgGL_{1,A}$ devient alors
@@ -2819,13 +2822,13 @@ $$1 \to \sgmu_{n,S} \to \sgSL_{n,S} \to \sgPGL_{n,S} \to 1$$
 donne après torsion
 $$1 \to \sgmu_{n,S} \to \sgSU_{A,\nu} \to \sgAut_{A,\nu} \to \sgAut_{Z(A),\nu} \to 1$$ 
 ou dans le cas intérieur
-$$1 \to \sgmu_{n,S} \to \sgSL_{A} \to \sgAut_{A} \to 1$$ 
+$$1 \to \sgmu_{n,S} \to \sgSL_{1,A} \to \sgAut_{A} \to 1$$ 
 et la suite exacte
 $$1 \to \sgSL_{n,S} \to \sgGL_{n,S} \to \sgGmS{S} \to 1$$
 donne
 $$1 \to \sgSU_{A,\nu} \to \sgU_{A,\nu} \to \sgGmS{S} \to 1.$$
 ou dans le cas intérieur
-$$1 \to \sgSL_{A} \to \sgGL_{A} \to \sgGmS{S} \to 1.$$
+$$1 \to \sgSL_{1,A} \to \sgGL_{1,A} \to \sgGmS{S} \to 1.$$
 \end{rema}
 
 \subsection{Suites exactes longues de cohomologie}
@@ -2844,16 +2847,11 @@ L'élément neutre du groupe est la classe de $\sgO_S$ elle-même, et l'inverse de 
 Le groupe de Brauer cohomologique est $\Het^2(S,\sgGm)$, qui coincide avec $\Hfppf^2(S,\sgGm)$ car $\sgGm$ est lisse, par \ref{lisseetalefppf_theo}.
  
 La construction suivante est une légère généralisation de \cite[Ch. V, \S 4.2]{gir}. \'Etant donnée une $\sgO_S$-algèbre d'Azumaya $A$ fixée, pour toute $\sgO_S$-algèbre d'Azumaya $B$, on considère la structure des \emph{$A$-banalisations} de $B$, notée $A$-$\ban(B)$. Un objet en cette structure est une paire $(M,\phi)$ où $M$ est un $A$-module localement libre de type fini (comme $A$-module) et $\phi:\faisEnd^{A-\text{mod}}_M \simeq B$ est un isomorphisme de $\sgO_S$-algèbres. Un morphisme $(M,\phi) \to (N,\psi)$ est un isomorphisme $f:M \to N$ de $A$-modules tel que $\int_f \circ \phi = \psi$. 
-\bap{Est-ce que cette construction de banalisation est générale, si on a un objet qui sert de point de base, et qu'on ne regarde que les formes de cet objet? J'en ai bien l'impression.}
 
 On considère la catégorie fibrée dont la fibre au dessus de $T$ est la catégorie des $A$-banalisations de $B_T$. Une algèbre d'Azumaya étant localement triviale pour les topologies étales ou \fppf, cette catégorie fibrée est une gerbe. De plus, le morphisme de faisceaux $\sgGm  \to \faisAut^{A-\ban(B)}_{M,\phi}$ envoyant un scalaire sur l'homothétie correspondante de $M$ est un isomorphisme, par l'exemple \ref{EndMAzumaya_exem}, on en déduit que cette gerbe est liée par $\sgGm$.
 \begin{defi} \label{banalisation_defi}
 On appelle \emph{gerbe des $A$-banalisations de $B$} la gerbe ci-dessus. On la note $A$-$\gerban(B)$.
 \end{defi}
-
-\begin{prop}
-\bap{Vérifier que cette gerbe est bien isomorphe à la gerbe des relèvements qui est à priori celle qui donne le bord dans $\Het^2$.}
-\end{prop}
 
 \begin{prop} \label{BrauerInject_defi}
 L'application qui à une algèbre d'Azumaya $B$ associe la gerbe $A$-$\gerban(B)$ passe aux classes d'équivalences, et définit un morphisme injectif
@@ -2898,7 +2896,7 @@ Le morphisme $\Het^1(S,\sgGL_{1,A})\to \Het^1(S,\sgPGL_A)$ est induit par le fon
 Enfin, le morphisme $\Het^1(S,\sgPGL_A) \to \Het^2(S,\sgGm)$ est induit par le foncteur ``gerbe des relèvements'', défini en \ref{deuxbord_exem}. On obtient donc qu'une $\sgO_S$-algèbre d'Azumaya $B$ est envoyée sur la gerbe dont la fibre en $T$ est constituée des relèvements $(M,\phi)$, où $M$ est un $A^{\opp}$-module, et $\phi:\faisEnd^{A^{\opp}\text{-mod}}_M \isoto B$ est un isomorphisme de $\sgO_S$-algèbres d'Azumaya. On reconnaît donc la gerbe $A^{\opp}$-$\gerban(B)$ des $A^{\opp}$-banalisations de $B$ définie en \ref{banalisation_defi}. 
 \medskip
 
-\bap{Revoir cette fin de partie à la lumière des champs, et faire le cas $\sgSL_A$.}
+\bap{Revoir cette fin de partie à la lumière des champs, et faire le cas des torseurs sous $\sgSL_{1,A}$?}
 Passons maintenant à la suite exacte courte
 $$1 \to \sgSL_n \to \sgGL_n \to \sgGm \to 1$$
 qui donne la suite exacte longue
